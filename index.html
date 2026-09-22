@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +7,18 @@
 
   <title>Loading...</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38MMQCM55C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-38MMQCM55C');
+  </script>
+
+  <!-- Redirect to Google Apps Script -->
   <meta http-equiv="refresh"
         content="0; url=https://script.google.com/macros/s/AKfycbzgc17FkiqZTCipitfByfXe38RcTjdb-sQ1vfRt7aq5MYcUQZOYH-AxM9pdURiqpIst/exec">
 
@@ -85,3 +97,4 @@
 </html>
 ```
 
+**Important:** dahil `0` seconds ang redirect, puwedeng hindi consistent ang GA4 tracking dahil mabilis umalis ang page. Kung ang purpose mo ay **accurately track every visitor sa Google Analytics**, mas magandang gumamit ng JavaScript redirect na nagbibigay ng maliit na delay para makapag-send muna ng GA4 event.
